@@ -29,7 +29,7 @@ function App() {
   const getAverageColor = () => {
     const fac = new FastAverageColor();
     fac
-      .getColorAsync("../src/assets/product/" + mainImage)
+      .getColorAsync("/images/" + mainImage)
       .then((color) => {
         setAverageColorGradient(color.rgba);
         calculateFontColor(color.rgba, 90);
@@ -111,7 +111,7 @@ function App() {
             <ShareIcon className="share-icon" />
             <div className="principal-image-container">
               <motion.img
-                src={"../src/assets/product/" + mainImage}
+                src={"/images/" + mainImage}
                 alt={name_prod}
                 className="principal-img"
                 id="principalImage"
@@ -124,10 +124,10 @@ function App() {
             </div>
             <div id="images" className="images">
               {productMockup.img.map((e: any, i) => {
-                console.log("./assets/product/" + e);
+                // console.log("./assets/product/" + e);
                 return (
                   <motion.img
-                    src={"../src/assets/product/" + e}
+                    src={"/images/" + e}
                     alt="drone"
                     key={i}
                     onClick={() => imageViewsHandler(e)}
