@@ -187,9 +187,9 @@ const ProductContainer = styled.div<{
 
   overflow-x: hidden;
   overflow-y: hidden;
-  background: #0a0a0adf;
+  background: #ffffffdf;
   color: ${(props) => (props.fontColor ? props.fontColor : "#ffffff")};
-  /* transition: all 0.5s ease-in-out; */
+  transition: background 0.5s ease-in-out;
 
   .title-background-container {
     display: flex;
